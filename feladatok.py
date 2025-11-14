@@ -47,5 +47,19 @@ def harmadik_feladat():
             kilencvenelottistaionok.append(stadion_lista[i].stadion_nev)
         i+=1
     print(f"1900-elötti stadionok:{kilencvenelottistaionok}")
-beolvasas()
-harmadik_feladat()
+
+
+
+#4. Hány olyan stadion van, amelyben 200 óta nem volt mérkőzés? 
+
+
+def negyedik_feladat():
+    ketszazevenemvoltmerkozes=0
+    i=0
+    while i<len(stadion_lista):
+        kulombesg=(stadion_lista[i].utolso_m - stadion_lista[i].elso_m).days
+        if kulombesg>730:
+            ketszazevenemvoltmerkozes+=1
+        i+=1
+    print(f"200 év óta nem volt mérkőzés:{ketszazevenemvoltmerkozes}")
+    return ketszazevenemvoltmerkozes

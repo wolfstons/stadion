@@ -63,3 +63,15 @@ def negyedik_feladat():
         i+=1
     print(f"200 év óta nem volt mérkőzés:{ketszazevenemvoltmerkozes}")
     return ketszazevenemvoltmerkozes
+
+#5. Összesen hány csapat játszott Buffalo - ban?
+
+def otodik_feladat():
+    buffalocsapatok=0
+    i=0
+    while i<len(stadion_lista):
+        if stadion_lista[i].varos=="Buffalo":
+            buffalocsapatok+=stadion_lista[i].csapat
+        i+=1
+    print(f"Buffalo csapatai összesen:{buffalocsapatok}")
+    return buffalocsapatok

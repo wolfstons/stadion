@@ -38,13 +38,14 @@ def masodikfeladat():
         i+=1
     return csaptaennyiseg
 
-def harmadik_feladat(stadion_lista):
+def harmadik_feladat():
     i=0
-    stadiumlista=[]
-    datum = datetime(1999, 1, 1).date()
+    kilencvenelottistaionok=[]
+    datum = datetime(1900, 1, 1).date()
     while i<len(stadion_lista):
         if stadion_lista[i].elso_m <datum:
-            stadiumlista.append(stadion_lista[i].stadion_nev)
-    print(stadion_lista)
+            kilencvenelottistaionok.append(stadion_lista[i].stadion_nev)
+        i+=1
+    print(f"1900-elötti stadionok:{kilencvenelottistaionok}")
 beolvasas()
-harmadik_feladat(stadion_lista)
+harmadik_feladat()

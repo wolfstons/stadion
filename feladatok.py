@@ -1,4 +1,5 @@
 from Stadion import Stadion
+from datetime import datetime
 
 stadion_lista=[]
 def beolvasas():
@@ -15,6 +16,7 @@ def beolvasas():
         stadion=Stadion(sor[0],sor[1],int(sor[2]),sor[3],sor[4])
         stadion_lista.append(stadion)
         i+=1
+    return stadion_lista
 
 def elso():
     newstadion_mennyiseg=0
@@ -27,7 +29,6 @@ def elso():
 
  
 
-print(stadion_lista)
 def masodikfeladat():
     csaptaennyiseg=0
     i=0
@@ -37,9 +38,13 @@ def masodikfeladat():
         i+=1
     return csaptaennyiseg
 
-def harmadik_feladat():
+def harmadik_feladat(stadion_lista):
     i=0
+    stadiumlista=[]
+    datum = datetime(1999, 1, 1).date()
     while i<len(stadion_lista):
-        stadion_lista[i].elso_m
-        if kulonbseg>
-    print(kulonbseg.days, "nap")
+        if stadion_lista[i].elso_m <datum:
+            stadiumlista.append(stadion_lista[i].stadion_nev)
+    print(stadion_lista)
+beolvasas()
+harmadik_feladat(stadion_lista)
